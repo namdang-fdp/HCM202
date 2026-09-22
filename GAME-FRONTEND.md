@@ -44,10 +44,10 @@ Dữ liệu monsters riêng và resolveMonster riêng; không dùng bảng/hàm 
 Hai đợt mỗi mùa, ở giây 40 và 100 của mùa; tối đa 8 đợt cả ván.
 Báo chiêng bằng banner 5s (không còn nút chiêng), sau đó quiz 12s.
 Đói: chủ đề Hạnh phúc, nhắm một cây Hạnh phúc; Dốt: quyền/tự do/độc lập, nhắm một cây Tự do.
-Từ mùa 3: 25% đợt là giặc cấp cao, quiz chủ đề quyền.
+Từ mùa 3: 25% đợt là giặc ngoại xâm, quiz chủ đề quyền.
 Đúng: không mất điểm; 30% nhận thẻ (trong số thẻ: 65% tăng tốc, 35% bẫy).
 Sai/hết giờ: ceil(40% giá trị quả còn lại) ở ô nhắm, kể cả chưa chín. Không có cây phù hợp thì không thiệt hại.
-Giặc cấp cao sai: thêm 15% khả năng cắn 40% giá trị một quả Độc lập.
+Giặc ngoại xâm sai: thêm 15% khả năng cắn 40% giá trị một quả Độc lập.
 Không trừ thêm vào điểm đã hái; không sửa plantedAt/readyAt; không tự tái tạo quả.
 Các vườn bận được bỏ qua đợt, không xếp chồng hai quiz. Không tạo đợt thiếu 17s cuối ván.
 Ngân hàng câu hỏi gồm 15 câu (Độc lập, Tự do, Hạnh phúc) có giải thích đáp án và nguồn trích dẫn. Có thể mở rộng ngân hàng câu hỏi.

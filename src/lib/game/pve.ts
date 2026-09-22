@@ -14,7 +14,7 @@ export function spawnWave(s:GameState,at:number){
   const slot=slots.length?slots[Math.floor(random(s)*slots.length)].i:null;
   s.monsters.push({id:++s.serial,garden:g.id,kind,question,slot,arrivesAt:at+5000,endsAt:at+17000,botAt:at+9000});
  }
- log(s,'monster','Chiêng cảnh báo: '+(kind==='doi'?'Giặc Đói':kind==='dot'?'Giặc Dốt':'Giặc cấp cao')+' tới sau 5 giây. Vườn đang đấu được miễn đợt này.',at);
+ log(s,'monster','Chiêng cảnh báo: '+(kind==='doi'?'Giặc Đói':kind==='dot'?'Giặc Dốt':'Giặc ngoại xâm')+' tới sau 5 giây. Vườn đang đấu được miễn đợt này.',at);
 }
 export function resolveMonster(s:GameState,m:Monster,answer:number|null,at:number){
  if(!s.monsters.some(x=>x.id===m.id))return;

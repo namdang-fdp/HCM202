@@ -8,7 +8,7 @@ export const PLANTS = {
 export const SEASONS = [
   { name: 'Gieo mầm', date: '1941', unlock: 'Trồng cây, gom gỗ, xây rào. Trộm mở từ mùa 2.', lore: 'Bắt đầu từ quyền tự quyết; cùng vun trồng tự do và đời sống của con người.' },
   { name: 'Mưa rào', date: '2–3/9/1945', unlock: 'Mở đấu trộm: mỗi người 1 lượt mùa này.', lore: 'Độc lập mở ra khởi đầu. Cơm ăn và học hành là những việc phải tiếp tục chăm lo.' },
-  { name: 'Xây làng', date: '10/1945–1/1946', unlock: 'Nhận lượt trộm mới. Giặc cấp cao có thể xuất hiện.', lore: 'Quyền cần được bảo vệ. Hạnh phúc và tự do của nhân dân đem lại ý nghĩa thực tế cho độc lập.' },
+  { name: 'Xây làng', date: '10/1945–1/1946', unlock: 'Nhận lượt trộm mới. Giặc ngoại xâm có thể xuất hiện.', lore: 'Quyền cần được bảo vệ. Hạnh phúc và tự do của nhân dân đem lại ý nghĩa thực tế cho độc lập.' },
   { name: 'Đối đầu', date: '1966', unlock: 'Lượt đấu cuối. Giữ thành quả, cân bằng số quả đã hái.', lore: 'Giữ nền tảng, bảo vệ thành quả bạn đã vun trồng. Các mùa là chương kể chuyện, không mô phỏng thời gian lịch sử.' },
 ];
 export const endAt = (s: GameState) => s.startedAt + s.duration*1000;
