@@ -50,7 +50,7 @@ Sai/hết giờ: ceil(40% giá trị quả còn lại) ở ô nhắm, kể cả 
 Giặc cấp cao sai: thêm 15% khả năng cắn 40% giá trị một quả Độc lập.
 Không trừ thêm vào điểm đã hái; không sửa plantedAt/readyAt; không tự tái tạo quả.
 Các vườn bận được bỏ qua đợt, không xếp chồng hai quiz. Không tạo đợt thiếu 17s cuối ván.
-12 câu hiện tại chuyển thể q1–q4 và diễn giải nội dung sách, có giải thích đáp án và nguồn nội bộ. Có thể mở rộng ngân hàng câu hỏi.
+Ngân hàng câu hỏi gồm 15 câu (Độc lập, Tự do, Hạnh phúc) có giải thích đáp án và nguồn trích dẫn. Có thể mở rộng ngân hàng câu hỏi.
 
 ## Hàng rào
 Mỗi cây có xác suất 25% tìm gỗ được gieo sẵn bằng PRNG, không roll lại khi click/tải trang.

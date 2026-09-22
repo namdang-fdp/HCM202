@@ -5,6 +5,7 @@ import type { GameAction, GameState } from '@/lib/game/types';
 type Session={code:string;token:string};
 type Room={code:string;roomName:string;hostId:string;selfId:string;status:'WAITING'|'PLAYING'|'FINISHED';revision:number;serverNow:number;players:{id:string;name:string}[];game:GameState|null;token?:string;message?:string};
 const KEY='happiness:online-room';
+const MAX_PLAYERS=100;
 async function api(path:string,session:Session|null,method='GET',body?:unknown,key?:string):Promise<Room>{
  const abort=new AbortController(),timer=setTimeout(()=>abort.abort(),10000);
  try{
@@ -83,7 +84,7 @@ export function GameEntry(){
   </>:<>
    <span className="garden-small-label">SẢNH CHỜ</span><h2>{room?.roomName||'Khu vườn của bạn'}</h2>
    <p className="room-share-code">Mã phòng <strong>{session.code}</strong></p><p className="room-entry-note">Gửi mã cho bạn bè để vào cùng phòng.</p>
-   {room?<><ul className="lobby-players">{room.players.map(p=><li key={p.id}><span>{p.name}{p.id===room.selfId?' (bạn)':''}</span><small>{p.id===room.hostId?'Chủ phòng':'Đã vào'}</small></li>)}</ul><p className="room-entry-note">{room.players.length}/8 người · Cần ít nhất 2 người</p>{room.selfId===room.hostId?<button className="garden-button primary" disabled={working||room.players.length<2} onClick={()=>void start()}>Bắt đầu cho cả phòng</button>:<p className="lobby-wait">Chờ chủ phòng bắt đầu…</p>}</>:<p>Đang kết nối lại phòng…</p>}
+   {room?<><ul className="lobby-players">{room.players.map(p=><li key={p.id}><span>{p.name}{p.id===room.selfId?' (bạn)':''}</span><small>{p.id===room.hostId?'Chủ phòng':'Đã vào'}</small></li>)}</ul><p className="room-entry-note">{room.players.length}/{MAX_PLAYERS} người · Cần ít nhất 2 người</p>{room.selfId===room.hostId?<button className="garden-button primary" disabled={working||room.players.length<2} onClick={()=>void start()}>Bắt đầu cho cả phòng</button>:<p className="lobby-wait">Chờ chủ phòng bắt đầu…</p>}</>:<p>Đang kết nối lại phòng…</p>}
    <button className="garden-try" onClick={leave}>Rời phòng</button>
   </>}
   {error&&<p className="lobby-error" role="alert">{error}</p>}{working&&<p role="status" className="room-entry-note">Đang xử lý…</p>}
