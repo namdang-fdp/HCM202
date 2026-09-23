@@ -1,7 +1,7 @@
 # Steal a Happiness — luật v3, phòng trực tuyến
 
 ## Phạm vi
-Route /game mặc định mở tạo/vào phòng và sảnh chờ, 2–8 người. Chủ phòng bắt đầu cho tất cả.
+Route /game mặc định mở tạo/vào phòng và sảnh chờ, 2–50 người. Chủ phòng bắt đầu cho tất cả.
 Java API tại dự án ../steal-a-happiness, H2 lưu bền mặc định. FE proxy /api/backend tới GAME_API_URL (mặc định http://127.0.0.1:8080).
 Chạy backend theo README của nó; FE: node node_modules/next/dist/bin/next dev --port 3000.
 Token khách lưu sessionStorage riêng từng tab: tải lại tiếp tục; đóng tab có thể mất quyền vào lại.
